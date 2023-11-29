@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const FoodInfo = () => {
   const [food, setFood] = useState([]);
@@ -19,13 +19,18 @@ const FoodInfo = () => {
         <div className="food__block">
           <div className="info__block">
             <p className="heading">Meal of the day</p>
-            <h2 className="title">{food[0].strMeal}</h2>
+            <Link to={{ pathname: `/${food[0].idMeal}` }}>
+              <h1 className="title">{food[0].strMeal}</h1>
+            </Link>
             <p className="subtitle">
               {food[0].strCategory} | {food[0].strArea}
             </p>
           </div>
+
           <div className="img__block">
-            <img src={food[0].strMealThumb} alt="meal" />
+            <Link to={{ pathname: `/${food[0].idMeal}` }}>
+              <img src={food[0].strMealThumb} alt="{meal.strMeal}" />
+            </Link>
           </div>
         </div>
       ) : (
