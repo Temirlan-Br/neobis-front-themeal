@@ -70,3 +70,27 @@ a {
   margin: 0 auto;
   cursor: pointer;
 }
+
+.details__block {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.ingredients {
+  margin: auto 0;
+}
+
+.instruction {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.btnYoutube {
+  width: 150px;
+  border: none;
+  background-color: #e47a00ec;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 30px auto;
+}
